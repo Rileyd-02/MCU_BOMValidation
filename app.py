@@ -4,6 +4,8 @@ import pandas as pd
 st.set_page_config(page_title="PLM Monthly Comparison", layout="wide")
 
 st.title("📊 PLM Monthly Excel Comparison Tool")
+st.subheader('About tool')
+st.write('Tool to map and compare PLM download similarity's and check supplier changes from month to month')
 
 prev_file = st.file_uploader("Upload Previous Month Excel", type=["xlsx"])
 curr_file = st.file_uploader("Upload Current Month Excel", type=["xlsx"])
@@ -90,3 +92,4 @@ if prev_file and curr_file:
         file_name="PLM_Monthly_Comparison.csv",
         mime="text/csv"
     )
+
